@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@backstage/cli": "workspace:^",
+    "@backstage/types": "workspace:^",
     "@testing-library/jest-dom": "^5.10.1"
   },
   "configSchema": "config.d.ts",
@@ -35,7 +36,7 @@
     "@backstage/core-plugin-api": "workspace:^",
     "@backstage/frontend-plugin-api": "workspace:^",
     "@backstage/plugin-graphiql": "workspace:^",
-    "@backstage/types": "workspace:^",
+    "@types/react": "^16.13.1 || ^17.0.0",
     "lodash": "^4.17.21"
   },
   "peerDependencies": {
