@@ -31,8 +31,13 @@ import {
   readAppExtensionParameters,
 } from './wiring/parameters';
 import { RoutingProvider } from './routing/RoutingContext';
-import { RouteRef } from '@backstage/core-plugin-api';
+import { ApiHolder, RouteRef } from '@backstage/core-plugin-api';
 import { getAvailablePlugins } from './wiring/discovery';
+import {
+  ApiFactoryRegistry,
+  ApiProvider,
+  ApiResolver,
+} from '@backstage/core-app-api';
 
 /** @public */
 export function createApp(options: { plugins: BackstagePlugin[] }): {
@@ -115,6 +120,8 @@ export function createApp(options: { plugins: BackstagePlugin[] }): {
 
   const routePaths = extractRouteInfoFromInstanceTree(rootInstances);
 
+  const apiHolder = createApiHolder(rootInstances);
+
   return {
     createRoot() {
       const rootComponents = rootInstances.map(
@@ -124,14 +131,39 @@ export function createApp(options: { plugins: BackstagePlugin[] }): {
           ) as typeof coreExtensionData.reactComponent.T,
       );
       return (
-        <RoutingProvider routePaths={routePaths}>
-          {rootComponents.map((Component, i) => (
-            <Component key={i} />
-          ))}
-        </RoutingProvider>
+        <ApiProvider apis={apiHolder}>
+          <RoutingProvider routePaths={routePaths}>
+            {rootComponents.map((Component, i) => (
+              <Component key={i} />
+            ))}
+          </RoutingProvider>
+        </ApiProvider>
       );
     },
   };
+}
+
+function createApiHolder(rootExtension: ExtensionInstance[]): ApiHolder {
+  const factoryRegistry = new ApiFactoryRegistry();
+
+  /* TODO: forward API extensions only */
+
+  const apiFactories = rootExtension
+    .map(
+      e =>
+        e.data.get(
+          coreExtensionData.apiFactory.id,
+        ) as typeof coreExtensionData.apiFactory.T,
+    )
+    .filter(Boolean);
+
+  for (const factory of apiFactories) {
+    factoryRegistry.register('default', factory);
+  }
+
+  ApiResolver.validateFactories(factoryRegistry, factoryRegistry.getAllApis());
+
+  return new ApiResolver(factoryRegistry);
 }
 
 /** @internal */

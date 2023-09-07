@@ -61,9 +61,9 @@ const app = createApp({
   // },
 });
 
-const legacyApp = createLegacyApp({ plugins: [legacyGraphiqlPlugin] });
+// const legacyApp = createLegacyApp({ plugins: [legacyGraphiqlPlugin] });
 
-export default legacyApp.createRoot(app.createRoot());
+export default app.createRoot();
 
 // const routes = (
 //   <FlatRoutes>
