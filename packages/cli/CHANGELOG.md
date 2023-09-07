@@ -1,5 +1,25 @@
 # @backstage/cli
 
+## 0.22.13-next.3
+
+### Patch Changes
+
+- 3494c502aba7: Added a new `repo fix` command that fixes auto-fixable problems in all packages. Initially the command fixes package export declarations, as well as marks all non-bundled frontend packages as side-effect free. Marking packages as free of side-effects can drastically reduce the Webpack bundle size.
+- f36113ca2305: Add experimental support for frontend package discovery.
+- a23fce763c6a: Fixed a bug where package exports entry points could not be `.tsx` files.
+- 956d226eeeee: Add `"sideEffects": false` to `package.json` in frontend package templates. This can be added to existing packages using the new `yarn fix` command.
+- Updated dependencies
+  - @backstage/catalog-model@1.4.2-next.2
+  - @backstage/config@1.1.0-next.2
+  - @backstage/errors@1.2.2-next.0
+  - @backstage/integration@1.7.0-next.3
+  - @backstage/release-manifests@0.0.10-next.1
+  - @backstage/types@1.1.1-next.0
+  - @backstage/cli-common@0.1.12
+  - @backstage/cli-node@0.1.4-next.0
+  - @backstage/config-loader@1.5.0-next.3
+  - @backstage/eslint-plugin@0.1.3
+
 ## 0.22.13-next.2
 
 ### Patch Changes

@@ -1,5 +1,22 @@
 # @backstage/plugin-linguist-backend
 
+## 0.4.3-next.3
+
+### Patch Changes
+
+- Updated dependencies
+  - @backstage/catalog-client@1.4.4-next.2
+  - @backstage/catalog-model@1.4.2-next.2
+  - @backstage/config@1.1.0-next.2
+  - @backstage/errors@1.2.2-next.0
+  - @backstage/plugin-linguist-common@0.1.2-next.0
+  - @backstage/types@1.1.1-next.0
+  - @backstage/backend-plugin-api@0.6.3-next.3
+  - @backstage/backend-common@0.19.5-next.3
+  - @backstage/backend-tasks@0.5.8-next.3
+  - @backstage/plugin-auth-node@0.3.0-next.3
+  - @backstage/plugin-catalog-node@1.4.4-next.3
+
 ## 0.4.3-next.2
 
 ### Patch Changes

@@ -1,5 +1,24 @@
 # @backstage/plugin-techdocs-backend
 
+## 1.7.0-next.3
+
+### Patch Changes
+
+- a8a614ba0d07: Minor `package.json` update.
+- Updated dependencies
+  - @backstage/catalog-client@1.4.4-next.2
+  - @backstage/catalog-model@1.4.2-next.2
+  - @backstage/config@1.1.0-next.2
+  - @backstage/errors@1.2.2-next.0
+  - @backstage/integration@1.7.0-next.3
+  - @backstage/plugin-catalog-common@1.0.16-next.2
+  - @backstage/plugin-permission-common@0.7.8-next.2
+  - @backstage/plugin-search-common@1.2.6-next.2
+  - @backstage/backend-plugin-api@0.6.3-next.3
+  - @backstage/backend-common@0.19.5-next.3
+  - @backstage/plugin-search-backend-module-techdocs@0.1.7-next.3
+  - @backstage/plugin-techdocs-node@1.8.0-next.3
+
 ## 1.7.0-next.2
 
 ### Patch Changes

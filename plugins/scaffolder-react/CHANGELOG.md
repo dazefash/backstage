@@ -1,5 +1,22 @@
 # @backstage/plugin-scaffolder-react
 
+## 1.5.5-next.3
+
+### Patch Changes
+
+- 406b786a2a2c: Mark package as being free of side effects, allowing more optimized Webpack builds.
+- Updated dependencies
+  - @backstage/catalog-client@1.4.4-next.2
+  - @backstage/catalog-model@1.4.2-next.2
+  - @backstage/core-components@0.13.5-next.3
+  - @backstage/core-plugin-api@1.6.0-next.3
+  - @backstage/errors@1.2.2-next.0
+  - @backstage/plugin-catalog-react@1.8.4-next.3
+  - @backstage/plugin-scaffolder-common@1.4.1-next.2
+  - @backstage/theme@0.4.2-next.0
+  - @backstage/types@1.1.1-next.0
+  - @backstage/version-bridge@1.0.5-next.0
+
 ## 1.5.5-next.2
 
 ### Patch Changes

@@ -1,5 +1,25 @@
 # @backstage/plugin-kubernetes-backend
 
+## 0.11.6-next.3
+
+### Patch Changes
+
+- a8a614ba0d07: Minor `package.json` update.
+- Updated dependencies
+  - @backstage/catalog-client@1.4.4-next.2
+  - @backstage/catalog-model@1.4.2-next.2
+  - @backstage/config@1.1.0-next.2
+  - @backstage/errors@1.2.2-next.0
+  - @backstage/plugin-kubernetes-common@0.6.6-next.2
+  - @backstage/plugin-permission-common@0.7.8-next.2
+  - @backstage/types@1.1.1-next.0
+  - @backstage/plugin-permission-node@0.7.14-next.3
+  - @backstage/backend-plugin-api@0.6.3-next.3
+  - @backstage/backend-common@0.19.5-next.3
+  - @backstage/integration-aws-node@0.1.6-next.2
+  - @backstage/plugin-auth-node@0.3.0-next.3
+  - @backstage/plugin-catalog-node@1.4.4-next.3
+
 ## 0.11.6-next.2
 
 ### Patch Changes
